@@ -25,13 +25,73 @@ The following Olist datasets are included in the `seeds/` folder:
 3. Run `dbt run` to build models
 4. Run `dbt test` to validate data
 5. Explore insights in the `analyses/` folder
+6. Generate visualizations: `python visualizations/run_all_visualizations.py`
 
 ## Project Structure
 - `models/` – dbt models (SQL transformations)
-- `analyses/` – SQL analysis scripts
-- `seeds/` – Raw CSV data
+  - `staging/` – 7 staging models for clean data layer
+  - `marts/` – 3 advanced analytics marts (orders, products, customer LTV)
+- `analyses/` – 22 SQL analysis scripts for business insights
+- `seeds/` – Raw CSV data (7 files, ~450K rows)
+- `visualizations/` – 28 interactive Plotly visualizations
+  - `outputs/` – Generated HTML charts and dashboard
 - `logs/` – dbt logs
 - `macros/` – Custom dbt macros
+
+## 📊 Visualizations
+
+This project includes **28 interactive visualizations** covering:
+
+### Customer Segmentation (5 charts)
+- Segment distribution (High-Value, At-Risk, Loyal, Churned)
+- Spend vs Recency analysis
+- Spending patterns by segment
+- Geographic distribution
+
+### Geographic Analysis (5 charts)
+- Sales heatmaps by state
+- City-level performance
+- Revenue distribution treemaps
+- State comparison metrics
+
+### Time Series & Trends (6 charts)
+- Monthly and quarterly sales trends
+- Seasonal patterns
+- Moving averages
+- Average order value evolution
+
+### Product Performance (5 charts)
+- Top-selling categories
+- Product recommendation networks
+- Cross-sell patterns
+- Category hierarchy analysis
+
+### Delivery & Payment (7 charts)
+- On-time delivery metrics
+- Actual vs estimated delivery
+- Payment method preferences
+- Regional payment patterns
+
+**View Dashboard**: Open `visualizations/outputs/index.html` in your browser
+
+**Generate Visualizations**:
+```bash
+cd visualizations
+pip install -r requirements.txt
+python run_all_visualizations.py
+```
+
+## 🔍 Advanced Analytics Included
+
+- Customer Segmentation using RFM analysis
+- Product Recommendation Engine (frequently bought together)
+- Time-to-Delivery Prediction Analysis
+- Seasonal Sales Forecasting
+- Geographic Sales Heatmaps
+- Payment Method Preferences by Region
+- Cohort Analysis & Customer Retention
+- Seller Performance Metrics
+- Churn Analysis
 
 ---
 
