@@ -72,7 +72,22 @@ This project includes **28 interactive visualizations** covering:
 - Payment method preferences
 - Regional payment patterns
 
+
+## 🚀 Interactive Dashboard Features (2026 Update)
+
 **View Dashboard**: Open `visualizations/outputs/index.html` in your browser
+
+**Key Features:**
+- **Dynamic Real-Time Filters**: Date range, state, and category filters update all metrics, KPIs, forecasts, and seller stats instantly
+- **KPI Cards**: MoM/YoY growth, conversion rate, AOV, retention, delivery time
+- **Predictive Analytics**: Revenue forecasting with AI-powered projections
+- **Customer Cohort Analysis**: Interactive retention heatmap
+- **Seller Performance Dashboard**: Top sellers, ratings, fulfillment metrics
+- **AI-Driven Recommendations**: Automated insights panel
+- **Quick Stats Ticker**: Live metrics banner
+- **Dark Mode**: Toggle for night-friendly viewing
+- **Sidebar Navigation & Search**: Instantly find and jump to any chart
+- **Responsive & Modern UI**: Mobile-friendly, glassmorphism, smooth animations
 
 **Generate Visualizations**:
 ```bash
@@ -95,11 +110,14 @@ python run_all_visualizations.py
 
 ---
 
-### Using the starter project
 
-Try running the following commands:
-- dbt run
-- dbt test
+## 🛠️ How to Update Data
+
+1. Change filters at the top of the dashboard (date, state, category)
+2. All metrics, KPIs, forecasts, and seller stats update instantly
+3. No page reload required—everything is interactive!
+
+---
 
 
 ### Resources:
